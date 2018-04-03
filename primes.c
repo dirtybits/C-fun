@@ -3,7 +3,7 @@
 
 int main(){
 
-    int i, j, count = 0;
+    int i, j, count;
     int *ptr = malloc(100*sizeof(*ptr));
 
     for(i = 0; i<=99; i++)
