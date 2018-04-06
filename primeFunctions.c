@@ -8,13 +8,14 @@ int main(){
 
     int i = 0;
     int flag = 0;
-    int *ptr = createintarray(100);
+    int size = 100;
+    int *ptr = createintarray(size);
     
     flag = isprime(75);
     printf("%p\n%d\n", ptr, *ptr);
     printf("%d\n", flag);
 
-    while(*(ptr+i)<=100){
+    while(*(ptr+i)<=size){
 
         if(isprime(*(ptr+i))){
             printf("%d is prime\n", *(ptr+i));
