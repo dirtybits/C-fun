@@ -26,12 +26,12 @@ int main(){
     return 0;
 }
 
-int *createintarray(int n){
+int *createintarray(int size){
 
     int i;
-    int *ptr = malloc(n*sizeof(*ptr));
+    int *ptr = malloc(size*sizeof(*ptr));
     
-    for(i = 0; i < n; i++){
+    for(i = 0; i < size; i++){
         *(ptr+i) = (i+1);
     }
     return ptr;
