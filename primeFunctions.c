@@ -9,8 +9,9 @@ int main(){
     int i = 0;
     int flag = 0;
     int *ptr = createArray();
-    printf("%p\n%d\n", ptr, *ptr);
+    
     flag = isprime(75);
+    printf("%p\n%d\n", ptr, *ptr);
     printf("%d\n", flag);
 
     while(*(ptr+i)<=100){
@@ -18,7 +19,7 @@ int main(){
         if(isprime(*(ptr+i))){
             printf("%d is prime\n", *(ptr+i));
         }else{
-        printf("%d is not prime\n", *(ptr+i));
+            printf("%d is not prime\n", *(ptr+i));
         }
         i++;
     }
@@ -36,22 +37,27 @@ int *createArray(){
     return ptr;
 }
 
-// need to fix this
+
 int isprime(int n){
     
     int i;
+    int count = 0;
 
     // corner case
     if(n == 1)
         return 0;
-
-    for(i = 2; i<n; i++){
+    
+    for(i = 1; i<n; i++){
         
         if(n % i == 0){
-            return 0;
-        }else{
-            return 1;
+            count++;
         }
+        if(count == 2){
+            return 0;
+        }
+    }
+    if(count == 1){
+        return 1;
     }
     // will get a warning without this:
     return 0;
