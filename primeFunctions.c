@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 int isprime(int);
-int *createintarray();
+int *createintarray(int);
 
 int main(){
 
     int i = 0;
     int flag = 0;
-    int *ptr = createArray();
+    int *ptr = createintarray(100);
     
     flag = isprime(75);
     printf("%p\n%d\n", ptr, *ptr);
