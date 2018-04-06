@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int isprime(int);
-int *createArray();
+int *createintarray();
 
 int main(){
 
@@ -26,12 +26,12 @@ int main(){
     return 0;
 }
 
-int *createArray(){
+int *createintarray(int n){
 
     int i;
-    int *ptr = malloc(100*sizeof(*ptr));
+    int *ptr = malloc(n*sizeof(*ptr));
     
-    for(i = 0; i < 100; i++){
+    for(i = 0; i < n; i++){
         *(ptr+i) = (i+1);
     }
     return ptr;
