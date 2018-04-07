@@ -1,16 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h> // to create a random array
 
 int isprime(int);
 int *createintarray(int);
+int *createrandarr(int);
 
 int main(){
 
     int i = 0;
     int flag = 0;
     int size = 100;
-    int *ptr = createintarray(size);
+    // int *ptr = createintarray(size);
+    int *ptr = createrandarr(size);
     
+    // function test
     flag = isprime(75);
     printf("%p\n%d\n", ptr, *ptr);
     printf("%d\n", flag);
@@ -26,7 +30,7 @@ int main(){
     }
     return 0;
 }
-
+// create int array
 int *createintarray(int size){
 
     int i;
@@ -37,8 +41,20 @@ int *createintarray(int size){
     }
     return ptr;
 }
+// create random int array W.I.P
+int *createrandarr(int size){
 
+    int i;
+    int *ptr = malloc(size*sizeof(*ptr));
 
+    for(i = 0; i < size; i++){
+        srand(time(0));
+        *(ptr+i) = ((i+1)*rand());
+    }
+    return ptr;
+}
+
+// check for primality
 int isprime(int n){
     
     int i;
