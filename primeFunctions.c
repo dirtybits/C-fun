@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h> // to create a random array
+#include <time.h> // for creating random numbers
 
 int isprime(int);
 int *createintarray(int);
