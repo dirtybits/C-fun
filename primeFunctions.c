@@ -19,7 +19,7 @@ int main(){
     printf("%p\n%d\n", ptr, *ptr);
     printf("%d\n", flag);
 
-    while(*(ptr+i)<=size){
+    while(i<size){
 
         if(isprime(*(ptr+i))){
             printf("%d is prime\n", *(ptr+i));
