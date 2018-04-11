@@ -8,26 +8,25 @@ int *createrandarr(int);
 
 int main(){
 
-    int i = 0;
-    int flag = 0;
+    int testflag = 0;
     int size = 100;
     // int *ptr = createintarray(size);
     int *ptr = createrandarr(size);
     
     // function test
-    flag = isprime(75);
+    testflag = isprime(75);
     printf("%p\n%d\n", ptr, *ptr);
-    printf("%d\n", flag);
+    printf("%d\n", testflag);
 
-    while(i<size){
+    for(int i = 0; i < size; i++){
 
         if(isprime(*(ptr+i))){
             printf("%d is prime\n", *(ptr+i));
         }else{
             printf("%d is not prime\n", *(ptr+i));
         }
-        i++;
     }
+    free(ptr);
     return 0;
 }
 // create int array
