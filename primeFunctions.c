@@ -10,8 +10,8 @@ int main(){
 
     int testflag = 0;
     int size = 100;
-    // int *ptr = createintarray(size);
-    int *ptr = createrandarr(size);
+    int *ptr = createintarray(size);
+    // int *ptr = createrandarr(size);
     
     // function test
     testflag = isprime(75);
