@@ -3,14 +3,13 @@
 // check for primality
 int isprime(int n){
     
-    int i;
     int count = 0;
 
     // corner case
     if(n == 1)
         return 0;
     
-    for(i = 1; i<n; i++){
+    for(int i = 1; i<n; i++){
         
         if(n % i == 0){
             count++;
